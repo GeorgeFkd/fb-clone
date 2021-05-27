@@ -13,6 +13,7 @@
     "mongoose": "^5.12.11",
     "next": "10.2.2",
     "next-auth": "^3.23.3",
+    "next-connect": "^0.10.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.1.0",

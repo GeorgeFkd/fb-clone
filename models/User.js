@@ -16,10 +16,11 @@ const userSchema = new mongoose.Schema({
     },
     friends: [{ type: mongoose.SchemaTypes.ObjectId, ref: "User" }],
 });
+//the first schema saved is the one used watch out
 userSchema.plugin(passportLocalMongoose, {
     usernameField: "email",
 });
 console.log("hello");
 const User = mongoose.models.User || mongoose.model("User", userSchema);
 
-export default User;
+module.exports = User;
