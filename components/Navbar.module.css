@@ -1,0 +1,30 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navSearch {
+  display: flex;
+}
+
+.navbar__center {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__right {
+  display: flex;
+}
