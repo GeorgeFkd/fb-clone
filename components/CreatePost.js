@@ -1,5 +1,5 @@
 import { Avatar } from "@material-ui/core";
-import PostOption from "./PostOption";
+import PostOption from "./posts/PostOption";
 import VideocamIcon from "@material-ui/icons/Videocam";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";

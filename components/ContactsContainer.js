@@ -3,17 +3,8 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import VideoCallIcon from "@material-ui/icons/VideoCall";
 
 import SearchIcon from "@material-ui/icons/Search";
-import Tooltip from "@material-ui/core/Tooltip";
-import { withStyles } from "@material-ui/core";
-const LightTooltip = withStyles((theme) => ({
-    tooltip: {
-        backgroundColor: "#eeeee4",
-        color: "gray",
-        boxShadow: theme.shadows[1],
-        fontSize: 11,
-    },
-}))(Tooltip);
-
+import ContactsBtn from "./ContactsBtn";
+import LightTooltip from "./LightTooltip";
 function ContactsContainer({ contacts }) {
     return (
         <>
@@ -21,6 +12,7 @@ function ContactsContainer({ contacts }) {
                 <div className="flex items-center mb-4">
                     <span className="text-gray-600 font-bold">Contacts</span>
                     <div className="ml-auto flex space-x-2">
+                        {/* <ContactsBtn Icon={SearchIcon} tooltipText="new room" /> */}
                         <LightTooltip title="new room" placement="bottom">
                             <VideoCallIcon
                                 fontSize="large"

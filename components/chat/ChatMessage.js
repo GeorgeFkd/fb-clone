@@ -1,21 +1,9 @@
 import { useSession } from "next-auth/client";
 import { useState } from "react";
 import { Avatar } from "@material-ui/core";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import ChatOptions from "./ChatOptions";
-import Tooltip from "@material-ui/core/Tooltip";
-import { withStyles } from "@material-ui/core";
+import LightTooltip from "../LightTooltip";
 
-const LightTooltip = withStyles((theme) => ({
-    tooltip: {
-        backgroundColor: "#eeeee4",
-        color: "gray",
-        boxShadow: theme.shadows[1],
-        fontSize: 11,
-        paddingTop: "0.5rem",
-        paddingBottom: "0.5rem",
-    },
-}))(Tooltip);
 function ChatMessage({ authorName, msgText, daySent, hourSent, minuteSent }) {
     const [session] = useSession();
     const [showOptions, setshowOptions] = useState(false);

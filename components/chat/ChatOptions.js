@@ -1,17 +1,7 @@
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import ReplyIcon from "@material-ui/icons/Reply";
 import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
-import Tooltip from "@material-ui/core/Tooltip";
-import { withStyles } from "@material-ui/core";
-
-const LightTooltip = withStyles((theme) => ({
-    tooltip: {
-        backgroundColor: "#eeeee4",
-        color: "gray",
-        boxShadow: theme.shadows[1],
-        fontSize: 11,
-    },
-}))(Tooltip);
+import LightTooltip from "../LightTooltip";
 function ChatOptions() {
     return (
         <div className="flex space-x-1" style={{ alignSelf: "flex-end" }}>

@@ -17,7 +17,10 @@ function MessengerRow({
             onMouseEnter={() => setshowOptions(!showOptions)}
             onMouseLeave={() => setshowOptions(!showOptions)}
         >
-            <Avatar src={imgSrc} style={{ width: "2rem", height: "2rem" }} />
+            <Avatar
+                src={imgSrc}
+                style={{ width: "2.3rem", height: "2.3rem" }}
+            />
             <div className="flex flex-col ">
                 <p className={`${isNotRead && "font-semibold"} text-white`}>
                     {chatName}

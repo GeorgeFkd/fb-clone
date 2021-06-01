@@ -9,8 +9,7 @@ import ThumbUpOutlinedIcon from "@material-ui/icons/ThumbUpOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@material-ui/icons/ChatBubbleOutlineOutlined";
 import ShareOutlinedIcon from "@material-ui/icons/ShareOutlined";
 import FavoriteOutlinedIcon from "@material-ui/icons/FavoriteOutlined";
-import CommentSection from "./CommentSection";
-import MessengerDropdown from "./MessengerDropdown";
+import CommentSection from "../CommentSection";
 function Post({ avatarSrc, name, groupname }) {
     return (
         <div className="bg-gray-700 p-2">

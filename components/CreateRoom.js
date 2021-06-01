@@ -1,8 +1,7 @@
 import VideoCallIcon from "@material-ui/icons/VideoCall";
 import { Avatar } from "@material-ui/core";
-import Tooltip from "@material-ui/core/Tooltip";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import { IconButton } from "@material-ui/core";
+import LightTooltip from "./LightTooltip";
 function CreateRoom({ avatarSrc }) {
     return (
         <div className="bg-gray-700 flex space-x-2 p-2 cursor-pointer items-center ">
@@ -13,49 +12,49 @@ function CreateRoom({ avatarSrc }) {
             {/* fix the grow stuff */}
             <div className="flex space-x-2 ">
                 {/* think about the width issue */}
-                <Tooltip title="George Fakidis">
+                <LightTooltip title="George Fakidis">
                     <Avatar
                         src={avatarSrc}
                         style={{ width: "2rem", height: "2rem" }}
                     />
-                </Tooltip>
-                <Tooltip title="George Fakidis">
+                </LightTooltip>
+                <LightTooltip title="George Fakidis">
                     <Avatar
                         src={avatarSrc}
                         style={{ width: "2rem", height: "2rem" }}
                     />
-                </Tooltip>
-                <Tooltip title="George Fakidis">
+                </LightTooltip>
+                <LightTooltip title="George Fakidis">
                     <Avatar
                         src={avatarSrc}
                         style={{ width: "2rem", height: "2rem" }}
                     />
-                </Tooltip>
-                <Tooltip title="George Fakidis">
+                </LightTooltip>
+                <LightTooltip title="George Fakidis">
                     <Avatar
                         src={avatarSrc}
                         style={{ width: "2rem", height: "2rem" }}
                     />
-                </Tooltip>
+                </LightTooltip>
 
-                <Tooltip title="George Fakidis">
+                <LightTooltip title="George Fakidis">
                     <Avatar
                         src={avatarSrc}
                         style={{ width: "2rem", height: "2rem" }}
                     />
-                </Tooltip>
-                <Tooltip title="George Fakidis">
+                </LightTooltip>
+                <LightTooltip title="George Fakidis">
                     <Avatar
                         src={avatarSrc}
                         style={{ width: "2rem", height: "2rem" }}
                     />
-                </Tooltip>
-                <Tooltip title="George Fakidis">
+                </LightTooltip>
+                <LightTooltip title="George Fakidis">
                     <Avatar
                         src={avatarSrc}
                         style={{ width: "2rem", height: "2rem" }}
                     />
-                </Tooltip>
+                </LightTooltip>
                 {/* make this circular */}
                 <div className="hover:bg-gray-500 rounded-lg bg-gray-600">
                     <ArrowForwardIosIcon />

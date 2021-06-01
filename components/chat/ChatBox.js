@@ -10,11 +10,12 @@ import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import GifIcon from "@material-ui/icons/Gif";
 import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
-import ChatMessage from "./ChatMessage";
 import ChatFeed from "./ChatFeed";
 
 function ChatBox() {
     const [session] = useSession();
+    //extract to tailwind class
+    const chatIconBtnClass = "rounded-full hover:bg-gray-400 cursor-pointer ";
     return (
         <div
             className="flex flex-col mt-8  border-yellow-200 border-2 space-y-6"
@@ -33,22 +34,22 @@ function ChatBox() {
                     <VideocamIcon
                         color="primary"
                         fontSize="large"
-                        className="rounded-full hover:bg-gray-400 p-1 cursor-pointer "
+                        className={`${chatIconBtnClass} p-1`}
                     />
                     <CallIcon
                         color="primary"
                         fontSize="large"
-                        className="rounded-full hover:bg-gray-400 p-1 cursor-pointer "
+                        className={`${chatIconBtnClass} p-1`}
                     />
                     <RemoveIcon
                         color="primary"
                         fontSize="large"
-                        className="rounded-full hover:bg-gray-400 p-1 cursor-pointer"
+                        className={`${chatIconBtnClass} p-1`}
                     />
                     <ClearIcon
                         color="primary"
                         fontSize="large"
-                        className="rounded-full hover:bg-gray-400 p-1 cursor-pointer "
+                        className={`${chatIconBtnClass} p-1`}
                     />
                 </div>
             </div>
@@ -62,18 +63,18 @@ function ChatBox() {
             <div className="flex space-x-1 items-center py-2">
                 <AddCircleIcon
                     color="secondary"
-                    className="cursor-pointer hover:bg-gray-400 rounded-full p-0.5"
+                    className={`${chatIconBtnClass} p-0.5`}
                     fontSize="large"
                 />
                 <PhotoLibraryIcon
                     color="secondary"
                     fontSize="large"
-                    className="cursor-pointer hover:bg-gray-400 rounded-full p-0.5"
+                    className={`${chatIconBtnClass} p-0.5`}
                 />
                 <GifIcon
                     color="secondary"
                     fontSize="large"
-                    className="cursor-pointer hover:bg-gray-400 rounded-full p-0.5"
+                    className={`${chatIconBtnClass} p-0.5`}
                 />
                 <div className="flex bg-gray-600 rounded-full flex-shrink-1 ">
                     <input
@@ -87,14 +88,14 @@ function ChatBox() {
                     <div className="flex items-center space-x-2 ml-auto mr-2 ml-auto">
                         <EmojiEmotionsIcon
                             color="secondary"
-                            className="cursor-pointer hover:bg-gray-400 rounded-full p-0.5"
+                            className={`${chatIconBtnClass} p-0.5`}
                             fontSize="large"
                         />
                     </div>
                 </div>
                 <WhatshotIcon
                     color="secondary"
-                    className="cursor-pointer hover:bg-gray-400 rounded-full p-0.5"
+                    className={`${chatIconBtnClass} p-0.5`}
                     fontSize="large"
                 />
             </div>
