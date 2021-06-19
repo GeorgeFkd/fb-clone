@@ -5,7 +5,12 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import HelpIcon from "@material-ui/icons/Help";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import Option from "./Option";
-function OptionsDropdown() {
+
+interface Props{
+    
+}
+
+const  OptionsDropdown:React.FC<Props> = ({}) => {
     const [session] = useSession();
     return (
         <div

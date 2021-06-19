@@ -3,7 +3,13 @@ import { useSession } from "next-auth/client";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { useState } from "react";
 
-const Comment = () => {
+interface Props {
+    author: string;
+    date: string; //prob date
+    content: string;
+}
+
+const Comment:React.FC<Props> =({author,date,content}) => {
     const [session] = useSession();
     const [showOptions, setshowOptions] = useState(false);
     return (
@@ -43,11 +49,11 @@ const Comment = () => {
                 <MoreHorizIcon
                     fontSize="large"
                     className="rounded-full hover:bg-gray-600 p-1 cursor-pointer mb-4"
-                    //style={{ color: "yellow" }}
+                    
                 />
             )}
         </div>
     );
-};
+}
 
 export default Comment;

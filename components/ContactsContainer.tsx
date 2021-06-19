@@ -5,7 +5,16 @@ import VideoCallIcon from "@material-ui/icons/VideoCall";
 import SearchIcon from "@material-ui/icons/Search";
 
 import LightTooltip from "./LightTooltip";
-function ContactsContainer({ contacts }) {
+import { useSession } from "next-auth/client";
+
+type Contact = {name:string,avatarSrc:string}
+
+interface Props{
+    contacts:Contact[]
+}
+
+const ContactsContainer:React.FC<Props> = ({ contacts }) => {
+    const [session] = useSession();
     return (
         <>
             <div className="flex flex-col">
@@ -35,16 +44,16 @@ function ContactsContainer({ contacts }) {
                             <MoreHorizIcon
                                 fontSize="large"
                                 className="rounded-full hover:bg-gray-600 p-1 cursor-pointer"
-                                className="rounded-full hover:bg-gray-600 p-1 cursor-pointer"
+                                
                                 style={{ color: "yellow" }}
                             />
                         </LightTooltip>
                     </div>
                 </div>
                 <div className="flex flex-col">
-                    {contacts.map((contact, idx) => {
+                    {contacts.map((contact, idx:number) => {
                         // the key will be sth else later
-                        return <Contact name="George Fakidis" key={idx} />;
+                        return <Contact avatarSrc={session.user.image} name={session.user.name} key={idx} />;
                     })}
                 </div>
             </div>

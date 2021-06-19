@@ -1,6 +1,13 @@
 import { Avatar } from "@material-ui/core";
-function Contact({ avatarSrc, name }) {
-    const avatarStyle = {
+
+interface Props{
+    avatarSrc:string,
+    name:string
+}
+
+
+const  Contact:React.FC<Props> = ({ avatarSrc, name }) => {
+    const avatarStyle:React.CSSProperties = {
         width: "2rem",
         height: "2rem",
     };

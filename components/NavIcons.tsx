@@ -5,13 +5,14 @@ import GroupIcon from "@material-ui/icons/Group";
 import GamepadIcon from "@material-ui/icons/Gamepad";
 import HomeIcon from "@material-ui/icons/Home";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { Tab } from "@material-ui/core";
 
-function NavIcons() {
+
+const  NavIcons:React.FC = () => {
     const [value, setValue] = useState("/");
     const router = useRouter();
-    const handleChange = (event, newValue) => {
+    const handleChange = (event:ChangeEvent<string>, newValue:string) => {
         setValue(value);
     };
 
