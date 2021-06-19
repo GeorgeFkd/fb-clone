@@ -7,6 +7,11 @@ function PostFeed() {
                 name="Roshan Art"
                 //groupname="React JS Developers"
             />
+            <Post
+                avatarSrc="https://links.papareact.com/5me"
+                name="Roshan Art"
+                //groupname="React JS Developers"
+            />
         </div>
     );
 }

@@ -7,7 +7,6 @@ import PhotoIcon from "@material-ui/icons/Photo";
 import Comment from "./Comment";
 function CommentSection() {
     const [session] = useSession();
-
     return (
         <div className="bg-transparent">
             <div className="flex flex-col">
@@ -46,9 +45,12 @@ function CommentSection() {
                         </div>
                     </div>
                 </div>
-                <Comment />
-                <Comment />
-                <Comment />
+
+                <>
+                    <Comment />
+                    <Comment />
+                    <Comment />
+                </>
             </div>
         </div>
     );

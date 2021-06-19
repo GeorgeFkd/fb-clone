@@ -8,14 +8,15 @@ function NotificationsDropdown() {
     const [session] = useSession();
     return (
         <div
-            className={`px-4 flex flex-col w-52 bg-gray-700 flex-col space-y-2 border-2 border-yellow-600 bg-gray-800 ${styles.container}`}
+            className={`px-4 flex rounded-lg flex-col w-52   space-y-2 border-2 border-yellow-600 ${styles.container}`}
             style={{
                 position: "absolute",
                 top: "3.3rem",
                 right: "1rem",
                 width: "400px",
-                maxHeight: "650px",
+                maxHeight: "550px",
                 overflowY: "auto",
+                backgroundColor: "#161414",
             }}
         >
             <div className="flex items-center mb-6">
@@ -83,6 +84,15 @@ function NotificationsDropdown() {
                     group="Programmer NullPosting"
                     ReactionIcon={PeopleOutlineIcon}
                     reactionColor="skyblue"
+                />
+                <NotificationRow
+                    from_imgSrc={session.user.image}
+                    isNotRead={false}
+                    from_name={session.user.name}
+                    content="mentioned you in a comment in"
+                    group="Programmer NullPosting"
+                    ReactionIcon={ChatBubbleIcon}
+                    reactionColor="limegreen"
                 />
                 <NotificationRow
                     from_imgSrc={session.user.image}

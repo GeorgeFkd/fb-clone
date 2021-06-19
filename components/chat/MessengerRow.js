@@ -2,12 +2,15 @@ import { Avatar } from "@material-ui/core";
 import { useState } from "react";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
+import ChatBox from "./ChatBox";
+import { render } from "react-dom";
 function MessengerRow({
     imgSrc,
     isNotRead,
     chatName,
     chatLastMsg,
     lastMsgDate,
+    handleClick,
 }) {
     const colorClass = isNotRead ? "#4596e7" : "#8098b0";
     const [showOptions, setshowOptions] = useState(false);
@@ -16,10 +19,11 @@ function MessengerRow({
             className="flex space-x-4 rounded-lg bg-transparent hover:bg-gray-500 items-center cursor-pointer"
             onMouseEnter={() => setshowOptions(!showOptions)}
             onMouseLeave={() => setshowOptions(!showOptions)}
+            onClick={() => handleClick(imgSrc, chatName)}
         >
             <Avatar
                 src={imgSrc}
-                style={{ width: "2.3rem", height: "2.3rem" }}
+                style={{ width: "2.3rem", height: "2.3rem", zIndex: "0" }}
             />
             <div className="flex flex-col ">
                 <p className={`${isNotRead && "font-semibold"} text-white`}>

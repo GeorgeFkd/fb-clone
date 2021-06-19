@@ -10,41 +10,18 @@ import ChatBubbleOutlineOutlinedIcon from "@material-ui/icons/ChatBubbleOutlineO
 import ShareOutlinedIcon from "@material-ui/icons/ShareOutlined";
 import FavoriteOutlinedIcon from "@material-ui/icons/FavoriteOutlined";
 import CommentSection from "../CommentSection";
+import { useState } from "react";
+import PostHeader from "./PostHeader";
 function Post({ avatarSrc, name, groupname }) {
+    const [openComments, setOpenComments] = useState(false);
+
     return (
         <div className="bg-gray-700 p-2">
-            <header className="flex space-x-1 flex-grow-1  p-1">
-                <Avatar src={avatarSrc} className="cursor-pointer" />
-                <div className="flex flex-col">
-                    <div className="flex text-white">
-                        <p className="hover:underline cursor-pointer">{name}</p>
-                        {groupname && (
-                            <>
-                                <ArrowRightIcon style={{ color: "gray" }} />
-                                <p className="hover:underline cursor-pointer">
-                                    {groupname}
-                                </p>
-                            </>
-                        )}
-                    </div>
-                    <div className="flex space-x-1 items-center">
-                        <p style={{ color: "gray" }}>8 h</p>
-                        <p style={{ color: "gray" }}>&#183;</p>
-                        <PublicIcon
-                            style={{
-                                color: "gray",
-                            }}
-                            fontSize="small"
-                        />
-                    </div>
-                </div>
-                <div style={{ marginLeft: "auto" }} className=" ">
-                    <MoreHorizIcon
-                        className="rounded-full hover:bg-gray-600"
-                        fontSize="large"
-                    />
-                </div>
-            </header>
+            <PostHeader
+                avatarSrc={avatarSrc}
+                name={name}
+                groupname={groupname}
+            />
 
             <p className="text-white text-sm p-1">
                 Guys please help me. I'm unable to fix this issue. trying to
@@ -76,7 +53,7 @@ function Post({ avatarSrc, name, groupname }) {
                             className="cursor-pointer"
                             style={{ color: "red" }}
                         />
-                        <p className="ml-2 hover:underline cursor-pointer">
+                        <p className="ml-2 hover:underline  cursor-pointer">
                             {5}
                         </p>
                     </div>
@@ -90,7 +67,10 @@ function Post({ avatarSrc, name, groupname }) {
                         <ThumbUpOutlinedIcon />
                         <p>Like</p>
                     </div>
-                    <div className="flex rounded-md justify-center cursor-pointer space-x-1 bg-transparent hover:bg-gray-500 flex-1">
+                    <div
+                        className="flex rounded-md justify-center cursor-pointer space-x-1 bg-transparent hover:bg-gray-500 flex-1"
+                        onClick={(e) => setOpenComments(true)}
+                    >
                         <ChatBubbleOutlineOutlinedIcon />
                         <p>Comment</p>
                     </div>
@@ -101,7 +81,7 @@ function Post({ avatarSrc, name, groupname }) {
                 </div>
                 <hr className="text-white " />
             </div>
-            <CommentSection />
+            {openComments && <CommentSection />}
         </div>
     );
 }

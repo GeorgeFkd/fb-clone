@@ -29,7 +29,7 @@ function SidebarRight() {
             />
             <hr></hr>
             <GroupConversations contacts={["George Fakidis"]} />
-            <ChatBox />
+            {/* <ChatBox /> */}
         </section>
     );
 }

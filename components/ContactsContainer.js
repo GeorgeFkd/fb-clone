@@ -42,11 +42,9 @@ function ContactsContainer({ contacts }) {
                     </div>
                 </div>
                 <div className="flex flex-col">
-                    {contacts.map((contact) => {
+                    {contacts.map((contact, idx) => {
                         // the key will be sth else later
-                        return (
-                            <Contact name="George Fakidis" key={Date.now()} />
-                        );
+                        return <Contact name="George Fakidis" key={idx} />;
                     })}
                 </div>
             </div>

@@ -12,31 +12,31 @@ import FlagIcon from "@material-ui/icons/Flag";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
 function SidebarLeft() {
-  return (
-    <section
-      className="hidden md:inline-flex  flex-col"
-      style={{ flex: "0.2", overflowY: "auto" }}
-    >
-      <SidebarRow Icon={StoreIcon} text="Marketplace" />
-      <SidebarRow Icon={PeopleIcon} text="Friends" />
-      <SidebarRow Icon={AccessTimeIcon} text="Memories" />
-      <SidebarRow Icon={SupervisedUserCircleIcon} text="Groups" />
-      <SidebarRow Icon={EventAvailableOutlinedIcon} text="Events" />
-      <SidebarRow Icon={BarChartOutlinedIcon} text="Ads" />
-      <SidebarRow Icon={StarIcon} text="Favourites" />
-      <SidebarRow Icon={WorkIcon} text="Jobs" />
-      <SidebarRow Icon={FlagIcon} text="Pages" />
-      <SidebarRow Icon={BookmarkIcon} text="Saved" />
-      <SidebarRow Icon={WbSunnyIcon} text="Weather" />
-      <SidebarRow Icon={ArrowDropDownIcon} text="See more" />
-      <hr className="bg-gray-200" />
-      your shortcuts
-      <div className="mt-auto">
-        <SidebarRow Icon={SupervisedUserCircleIcon} text="Groups" />
-        <SidebarRow Icon={SupervisedUserCircleIcon} text="Groups" />
-      </div>
-    </section>
-  );
+    return (
+        <section
+            className="hidden md:inline-flex  flex-col"
+            style={{ flex: "0.2", overflowY: "auto" }}
+        >
+            <SidebarRow Icon={StoreIcon} text="Marketplace" />
+            <SidebarRow Icon={PeopleIcon} text="Friends" />
+            <SidebarRow Icon={AccessTimeIcon} text="Memories" />
+            <SidebarRow Icon={SupervisedUserCircleIcon} text="Groups" />
+            <SidebarRow Icon={EventAvailableOutlinedIcon} text="Events" />
+            <SidebarRow Icon={BarChartOutlinedIcon} text="Ads" />
+            <SidebarRow Icon={StarIcon} text="Favourites" />
+            <SidebarRow Icon={WorkIcon} text="Jobs" />
+            <SidebarRow Icon={FlagIcon} text="Pages" />
+            <SidebarRow Icon={BookmarkIcon} text="Saved" />
+            <SidebarRow Icon={WbSunnyIcon} text="Weather" />
+            <SidebarRow Icon={ArrowDropDownIcon} text="See more" />
+            <hr className="bg-gray-200" />
+            your shortcuts
+            <div className="mt-auto">
+                <SidebarRow Icon={SupervisedUserCircleIcon} text="Groups" />
+                <SidebarRow Icon={SupervisedUserCircleIcon} text="Groups" />
+            </div>
+        </section>
+    );
 }
 
 export default SidebarLeft;

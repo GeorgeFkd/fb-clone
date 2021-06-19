@@ -12,22 +12,22 @@ import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import ChatFeed from "./ChatFeed";
 
-function ChatBox() {
+function ChatBox({ chatName, chatImg }) {
     const [session] = useSession();
     //extract to tailwind class
     const chatIconBtnClass = "rounded-full hover:bg-gray-400 cursor-pointer ";
     return (
         <div
             className="flex flex-col mt-8  border-yellow-200 border-2 space-y-6"
-            style={{ width: "22rem" }}
+            style={{ width: "22rem", backgroundColor: "#161414" }}
         >
             <div className=" bg-transparent flex items-center ">
                 <div className="hover:bg-gray-300 p-2 flex items-center space-x-1 rounded-md text-white">
                     <Avatar
-                        src={session.user.image}
+                        src={chatImg}
                         style={{ width: "2rem", height: "2rem" }}
                     />
-                    <p className="text-sm">{"Guantanamo"}</p>
+                    <p className="text-sm">{chatName}</p>
                     <ArrowDropDownOutlinedIcon />
                 </div>
                 <div className="flex space-x-2 ml-auto">

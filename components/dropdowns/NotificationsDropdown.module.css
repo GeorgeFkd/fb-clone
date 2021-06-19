@@ -1,0 +1,17 @@
+.container::-webkit-scrollbar-button {
+    display: none;
+}
+
+.container::-webkit-scrollbar {
+    width: 0.5rem;
+    display: none;
+}
+
+.container:hover::-webkit-scrollbar {
+    display: inline;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 1rem;
+}
