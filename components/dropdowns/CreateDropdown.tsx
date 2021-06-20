@@ -8,6 +8,8 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import CreateIcon from "@material-ui/icons/Create";
 
 
+console.log('hello ts')
+
 interface Props{
     
 }

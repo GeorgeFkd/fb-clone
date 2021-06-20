@@ -9,6 +9,7 @@ interface Props{
 }
 
 const  CreateDropdownRow:React.FC<Props> = ({ Icon, title, prompt })=> {
+    console.log('hello ts dd row')
     return (
         <div className="flex space-x-4 rounded-md bg-transparent  hover:bg-gray-300 items-center cursor-pointer">
             <Icon

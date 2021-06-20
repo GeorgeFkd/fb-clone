@@ -11,7 +11,7 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 import { useSession } from "next-auth/client";
 import { useEffect, useState } from "react";
-import MessengerDropdown from "./chat/MessengerDropdown";
+import MessengerDropdown from "./chat/MessengerDropdown.tsx";
 import OptionsDropdown from "./dropdowns/OptionsDropdown";
 import NotificationsDropdown from "./dropdowns/NotificationsDropdown";
 import CreateDropdown from "./dropdowns/CreateDropdown";

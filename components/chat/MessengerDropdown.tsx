@@ -8,7 +8,8 @@ import { useSession } from "next-auth/client";
 import LightTooltip from "../LightTooltip";
 import { useState } from "react";
 import MessengerOptionsDropdown from "./MessengerOptionsDropdown";
-import ChatBox from "./ChatBox";
+import ChatBox from "./ChatBox.tsx";
+//!
 // prepei na brw ena tropo me onClick sto messengerRow na ginetai chatBox me ta idia stoixeia sto katw meros ths othonis
 
 interface Props{

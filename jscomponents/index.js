@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import StoryFeed from "../components/StoryFeed";
 import SidebarLeft from "../components/SidebarLeft";
 import CreatePost from "../components/CreatePost";
-import PostFeed from "../components/posts/PostFeed";
+import PostFeed from "../jscomponents/posts/PostFeed";
 import CreateRoom from "../components/CreateRoom";
 import SidebarRight from "../components/SidebarRight";
 import { getSession } from "next-auth/client";

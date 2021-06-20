@@ -9,8 +9,8 @@ interface StoryType{
 }
 
 
-
-const StoryFeed:React.FC<StoryType[]> = ({}) => {
+//<StoryType[]>
+const StoryFeed:React.FC = () => {
     return (
         <div className="flex space-x-2">
             <Story
